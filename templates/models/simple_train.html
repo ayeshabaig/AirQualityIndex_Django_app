@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+
+
+<div class="add_values" style="display:{% if results %} {{block}} {% else %} {{'none'}} {% endif %}">
+    <div class="row add_data_points"><h4>TRAINING RESULT</div>
+    <div class = "row">
+        <div class="">
+            {% for i in results%}
+                <div> {{i}} </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="add_values">
+    <div class="row add_data_points"><h4>ADD A DATA POINT</h4></div>
+    <form action='/operations/train_data' method="POST">
+        {% csrf_token %}
+        <div class="row">
+
+            <div class="form-group col-md-2">
+                <label for="wind_dir" class="col-form-label"> wind_dir  </label>
+                <input id="wind_dir" step="0.01" required="True"  type="number" placeholder="Enter a value b/w 10 and 999" name="wind_dir" class="form-control ">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="cos_wind" class="col-form-label"> cos_wind  </label>
+                <input id="cos_wind" step="0.01" required="True"  type="number" placeholder="Enter a value between -1 and 1" name="cos_wind" class="form-control ">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="TEMP" class="col-form-label"> TEMP  </label>
+                <input id="TEMP"  step="0.01" required="True"  type="number" placeholder=" between -12.25 and 36.75" name="TEMP" class="form-control ">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="sin_wind" class="col-form-label"> sin_wind  </label>
+                <input id="sin_wind" step="0.01" required="True"  type="number" placeholder=" between -1 and 1" name="sin_wind" class="form-control ">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="population" class="col-form-label"> population in thousands  </label>
+                <input id="population" step="0.01"  required="True"  type="number" placeholder=" between 0 and 181" name="population" class="form-control ">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="VIS" class="col-form-label"> VIS  </label>
+                <input id="VIS" step="0.01" type="number" required="True"  placeholder="between 0 and 1" name="VIS" class="form-control ">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="AQI_VALUE" class="col-form-label"> AQI_VALUE</label>  
+                <input id="AQI_VALUE" step="0.01" required="True"  type="number" placeholder="between 3.27 and 388.5" name="AQI_VALUE" class="form-control ">
+            </div>
+        </div>
+        <br>
+        <button  type="submit" class="btn btn-lg"> Train </button>
+    </form>
+</div>
+
+<div class="add_values">
+    <div class="row add_data_points"><h4>ADD A CSV</h4></div>
+    <form action='/operations/train_csv' method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="csv_file" class="col-4 col-form-label"> UPLOAD A CSV: </label>
+            <input id="csv_file" type="file" required="True" name="csv_file" class="form-control col-7">
+        </div>
+        <button  type="submit" class="btn btn-lg"> Train </button>
+    </form>
+</div>
+
+
+
+{% endblock %}

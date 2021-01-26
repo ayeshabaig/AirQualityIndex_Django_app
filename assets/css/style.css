@@ -1,0 +1,52 @@
+body {
+    background: radial-gradient(white, lightgrey); 
+    text-transform: capitalize; 
+    color: black;
+    font-family: 'Langar', cursive;
+    
+}
+
+.btn-bar{
+    margin: 20px;
+}
+
+
+
+.btn{
+    color:black;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    box-shadow: none;
+    -webkit-box-shadow: 5px 5px 10px 7px rgba(0,0,0,0.9);
+}
+
+.active {
+    background-color: black;
+    color: white
+}
+
+.btn:hover {
+    color: white;
+    background-color:rgb(43, 37, 37);
+}
+
+.error{
+    color: red
+}
+
+.add_values {
+    border: 1px solid;
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 5px 5px 10px 7px rgba(0,0,0,0.9);
+    border-radius: 5px;
+}
+
+.add_data_points{
+    border-bottom: 5px solid black;
+    border-radius: 15%;
+}
+.row {
+    padding:20px;
+}
+

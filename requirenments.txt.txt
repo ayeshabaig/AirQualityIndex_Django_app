@@ -1,0 +1,7 @@
+pickle
+Django==2.2
+djangorestframework==3.12.2
+scikit-learn==0.03.1
+pandas
+pickle
+numpy

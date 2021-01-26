@@ -1,0 +1,200 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="row">
+    <div class=col-md-4>
+        <canvas id="myChart1"></canvas>
+    </div>
+    <div class=col-md-4>
+        <canvas id="myChart2"></canvas>
+    </div>
+    <div class=col-md-4>
+        <canvas id="myChart3"></canvas>
+    </div>
+</div>
+<div class="row">
+    <div class=col-md-4>
+        <canvas id="myChart4"></canvas>
+    </div>
+    <div class=col-md-4>
+        <canvas id="myChart5"></canvas>
+    </div>
+    <div class=col-md-4>
+        <canvas id="myChart6"></canvas>
+    </div>
+</div>
+
+<canvas id="myChart"></canvas>
+
+
+<div class="add_values" >
+    <div class="row add_data_points">DESCRIPTION</div>
+    <div class = "row">
+        
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script>
+    var ctx = document.getElementById('myChart1').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'radar',
+
+        // The data for our dataset
+        data: {
+            labels: ['Wind-Dir', 'cos_wind', 'TEMP', 'sin_wind', 'population', 'VIS', 'AQI_VALUE'],
+            datasets: [{
+                label: "AQI PREDICTION DATA",
+                backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "##6f42c1", "#36A2EB", "#20c997"],
+                borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#6f42c1", "#36A2EB", "#20c997"],
+                data: [218.861375, -0.04444485742592021, 16.845261874999803, -0.03355391954519217, 57.54556666111946, 0.9848969723107502, 40.03460276098169]
+                
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            title : {
+                display: true,
+                text: "plot of mean"
+            }
+        }
+    });
+
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'polarArea',
+
+        // The data for our dataset
+        data: {
+            labels: ['Wind-Dir', 'cos_wind', 'TEMP', 'sin_wind', 'population', 'VIS', 'AQI_VALUE'],
+            datasets: [{
+                label: "AQI PREDICTION DATA",
+                backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "##6f42c1", "#36A2EB", "#20c997"],
+                borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#6f42c1", "#36A2EB", "#20c997"],
+                data: [170.6025644159446, 0.8051313543569302, 10.051012784667313, 0.5905290860166021, 73.06616252334308, 0.01373421161321457, 26.076383324073408]
+                
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            title : {
+                display: true,
+                text: "plot of standard deviation"
+            }
+        }
+    });
+
+
+    var ctx = document.getElementById('myChart3').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ['Wind-Dir', 'cos_wind', 'TEMP', 'sin_wind', 'population', 'VIS', 'AQI_VALUE'],
+            datasets: [{
+                label: "AQI PREDICTION DATA",
+                backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "##6f42c1", "#36A2EB", "#20c997"],
+                borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#6f42c1", "#36A2EB", "#20c997"],
+                data: [10.0, -1.0, -12.25, -1.0, 0.0, 0.0, 3.279220779220779]
+                
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            title : {
+                display: true,
+                text: "plot of minimum values of data points"
+            }
+        }
+    });
+
+
+    var ctx = document.getElementById('myChart4').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ['Wind-Dir', 'cos_wind', 'TEMP', 'sin_wind', 'population', 'VIS', 'AQI_VALUE'],
+            datasets: [{
+                label: "AQI PREDICTION DATA",
+                backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "##6f42c1", "#36A2EB", "#20c997"],
+                borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#6f42c1", "#36A2EB", "#20c997"],
+                data: [130.0, -0.9396926207859084, 7.85, -0.5000000000000004, 0.0, 0.9843007045825376, 19.383116883116887]
+                
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            title : {
+                display: true,
+                text: "plot vlaue of 25 %ile of data"
+            }
+        }
+    });
+
+
+    var ctx = document.getElementById('myChart5').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'polarArea',
+
+        // The data for our dataset
+        data: {
+            labels: ['Wind-Dir', 'cos_wind', 'TEMP', 'sin_wind', 'population', 'VIS', 'AQI_VALUE'],
+            datasets: [{
+                label: "AQI PREDICTION DATA",
+                backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "##6f42c1", "#36A2EB", "#20c997"],
+                borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#6f42c1", "#36A2EB", "#20c997"],
+                data: [310.0, 0.766044443118978, 25.05, 0.5, 54.04969024658203, 0.984393741890498, 56.065]
+                
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            title : {
+                display: true,
+                text: "plot of 75%ile of data"
+            }
+        }
+    });
+
+
+    var ctx = document.getElementById('myChart6').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'radar',
+
+        // The data for our dataset
+        data: {
+            labels: ['Wind-Dir', 'cos_wind', 'TEMP', 'sin_wind', 'population', 'VIS', 'AQI_VALUE'],
+            datasets: [{
+                label: "AQI PREDICTION DATA",
+                backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "##6f42c1", "#36A2EB", "#20c997"],
+                borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#6f42c1", "#36A2EB", "#20c997"],
+                data: [999.0, 1.0, 36.75, 1.0, 181.2145538330078, 1.0, 388.832]
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            title : {
+                display: true,
+                text: "plot of maximum values of data points"
+            }
+        }
+    });
+</script>
+
+{%endblock%}

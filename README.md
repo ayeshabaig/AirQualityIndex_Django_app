@@ -1,6 +1,6 @@
 # AirQualityIndex(AQI)App
 
-This application is based on the Django Framework including the ORM and SCIKIT-Learn API. We utlized a Supervised Machine Learning Model. The Algorithm is based on Regression and Decision Trees.
+This application is based on the Django Framework including the ORM and Scikit-Learn API. We utlized a Supervised Machine Learning Model. The Algorithm is based on Regression and Decision Trees.
 
 The project is structured with nested urls with the roots linked to the visuals.
 

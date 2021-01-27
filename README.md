@@ -12,8 +12,8 @@ This is based on a monolithic framework.
 The training was done in 2 phases using the form with a imput data values unique to the lablel and data point specified. (supervised learning)
 
 It utlizes a Supervised Machine Learning Model. The Algorithm is based on Regression and Decision Trees.
-Scikit-learn does not support incremental training, therefore we use a trained dataframe which was used to train the model and the data points are concatenated with this to create a new model with the old data points.
-It utilizes historacal data that can be concatenated with the new data to create a new model. To scale the input of new data, concatenation was utlized. 
+Scikit-learn does not support incremental training, therefore we use a trained dataframe which was used to train the model and the data points. They are concatenated with this to create a new model with the old data points.
+It utilizes historical data that can be concatenated with the new data to create a new model. To scale the input of new data, concatenation was utlized. 
 
 Testing the data: While the training phase in effect the pickle file is stored and fetched whenever a testing route is called with a single data point with some values and the target value and the values are put into the testing bucket and the outcome by the model that outcome and the lable are test is done using the rmse.
 You can also use a csv and use the predict action to predict the rmse.

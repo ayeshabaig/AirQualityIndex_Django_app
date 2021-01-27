@@ -1,6 +1,8 @@
 # AirQualityIndex(AQI)App
 
-This application is based on the Django Framework including the ORM. This project is a basic data science project that allows you to use a ML to visualize test and train based on the model
+This application is based on the Django Framework including the ORM. 
+The front end utilzes the bootstrap front end. For the charts, it utilzes charts.js. 
+This project is a basic data science project that allows you to use a ML to visualize test and train based on the model
 The project is structured with nested urls with the roots linked to the visuals. Each application/url either render the routes or handles the data sent from the front end.
 3 Apps: visualizations, models training and testing, authentication.
 This is based on a monolithic framework.
